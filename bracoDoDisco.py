@@ -1,7 +1,6 @@
 from copy import deepcopy
 import numpy as np
 import sys
-from copy import deepcopy
 
 def firstComeFirstServed(passoApasso = False): #sempre pega o elemento da frente e subtrai com o anterior
     soma = 0
