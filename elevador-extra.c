@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-int cmpfunc (const void * a, const void * b) {//funÁ„o para auxilar no qsort
+int cmpfunc (const void * a, const void * b) {//fun√ß√£o para auxilar no qsort
    return ( *(int*)a - *(int*)b );
 }
 
@@ -22,13 +22,13 @@ int algoritmoDoElevador(char *arr){
           }
 	}
     
-   int vetorElementos[quantElemento];//vetor que guardara os elementos +1 contando com o elemento inicial que È a borda do disco
+   int vetorElementos[quantElemento];//vetor que guardara os elementos +1 contando com o elemento inicial que √© a borda do disco
    int contador;//contador para o vetor de elementos
    contador = 0;
    
    //Split de todos numeros passados
    char * token = strtok(strdup(arr), " ");//split da string passada
-   bordaDoDisco = atoi(token);//pega o primeiro numero que È a borda do disco
+   bordaDoDisco = atoi(token);//pega o primeiro numero que √© a borda do disco
    while( token != NULL ) {//while necessario para fazer o split
       //printf( " %s\n", token ); //printing each token
       if(atoi(token)>bordaDoDisco){//se algum elemento for maior que a borda do disco...
@@ -41,13 +41,13 @@ int algoritmoDoElevador(char *arr){
    }
    
    
-   if(flagBordaDoDisco == 1){ //entao È porque a entrada passada È maior que a borda do disco entao n„o pode
+   if(flagBordaDoDisco == 1){ //entao √© porque a entrada passada √© maior que a borda do disco entao n√£o pode
 		return -1;
    }
    
    elementoInicial = vetorElementos[0];//primeiro elemento, antes de ordenar
    
-   qsort(vetorElementos, quantElemento, sizeof(int), cmpfunc);//funÁ„o que ordena a entrada em ordem crescente
+   qsort(vetorElementos, quantElemento, sizeof(int), cmpfunc);//fun√ß√£o que ordena a entrada em ordem crescente
    
    for(i=0;i<quantElemento;i++){
    	
@@ -84,7 +84,7 @@ int main() {
     char resultadoEmString[nDigits];
     
     itoa(resultado,resultadoEmString,10);
-    if(resultado!=-1){//se todos passados forem menores que a borda do disco È porque deu certo.
+    if(resultado!=-1){//se todos passados forem menores que a borda do disco √© porque deu certo.
     	printf("Movimentacoes do braco do disco: %s",resultadoEmString);
 	}
     return 0;
